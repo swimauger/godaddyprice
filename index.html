@@ -9,7 +9,9 @@
 <body>
     <script type="text/javascript">
         const domain = location.href.split('?')[0];
-        fetch(`https://www.godaddy.com/domainsearch/find?domainToCheck=${domain}`)
+        fetch(`https://www.godaddy.com/domainsearch/find?domainToCheck=${domain}`, {
+                mode: 'no-cors'
+            })
             .then(response => response.text())
             .then(contents => console.log(contents))
             .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
