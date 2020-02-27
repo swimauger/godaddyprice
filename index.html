@@ -10,7 +10,10 @@
     <script type="text/javascript">
         async function scrape(url) {
             try {
-                let response = await fetch(url);
+                let response = await fetch(url, {
+                    mode: 'no-cors',
+                    method: 'get'
+                });
                 let data = response.text();
                 document.querySelector('body').innerHTML += data;
             } catch (err) {
