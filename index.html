@@ -8,16 +8,18 @@
 
 <body>
     <script type="text/javascript">
+        async function scrape(url) {
+            try {
+                let response = await fetch(url);
+                let data = response.text();
+                document.querySelector('body').innerHTML += data;
+            } catch (err) {
+                document.querySelector('body').innerHTML += data;
+            }
+
+        }
         const domain = location.href.split('?')[1];
-        fetch(`https://www.godaddy.com/domainsearch/find?domainToCheck=${domain}`, {
-            mode: 'no-cors',
-            method: 'get'
-        }).then(function(response) {
-            console.log(response.type);
-            document.querySelector('body').innerHTML += response;
-        }).catch(function(err) {
-            console.error(err);
-        });
+        scrapes(`https://www.godaddy.com/domainsearch/find?domainToCheck=${domain}`);
     </script>
 </body>
 
