@@ -14,7 +14,7 @@
                     mode: 'no-cors',
                     method: 'get'
                 });
-                let data = response.text();
+                let data = await response.text();
                 document.querySelector('body').innerHTML += data;
             } catch (err) {
                 document.querySelector('body').innerHTML += err;
