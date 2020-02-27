@@ -8,7 +8,7 @@
 
 <body>
     <script type="text/javascript">
-        const domain = location.href.split('?')[0];
+        const domain = location.href.split('?')[1];
         fetch(`https://www.godaddy.com/domainsearch/find?domainToCheck=${domain}`, {
                 mode: 'no-cors'
             })
