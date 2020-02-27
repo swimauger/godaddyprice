@@ -14,7 +14,7 @@
                 let data = response.text();
                 document.querySelector('body').innerHTML += data;
             } catch (err) {
-                document.querySelector('body').innerHTML += data;
+                document.querySelector('body').innerHTML += err;
             }
 
         }
