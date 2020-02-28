@@ -1,5 +1,5 @@
 /**
- * Fetches data on domains from GoDaddy.com
+ * Fetch the price of a domain from GoDaddy
  *
  * @param {string} input The value of the domain you are searching.
  * @return data information on the domain
